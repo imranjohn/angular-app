@@ -1,0 +1,8 @@
+<p>servers works!</p>
+<label for="">Server Name</label><input type="text" [(ngModel)]="serverName"> <br>
+<button class="btn-primary btn" 
+[disabled]="!allowedNewServer"
+(click)="onCreateServer()">Add Server</button>
+<p [innerText]="serverStatus">Server is {{serverStatus}}</p>
+<p>{{serverCreationStatus}}</p>
+<app-server *ngFor="let server of servers"></app-server>
